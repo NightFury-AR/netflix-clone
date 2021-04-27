@@ -1,0 +1,32 @@
+@import "../../utilities/responsive_style";
+
+.navbar {
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:transparent;
+    z-index: 1;
+    /* Animation */
+    transition-timing-function: ease-in;
+    transition: all .5s;
+    .brand__logo {
+        @include xs {width: 80px;};
+        @include md {width: 150px;};
+        margin-left: 20px;
+        cursor: pointer;
+    }
+    .user__logo {
+        cursor: pointer;
+        margin-right: 20px;
+        @include xs {width: 15px;height: 15px;};
+        @include md {width: 30px;height: 30px;};
+    }
+}
+
+.nav__black {
+    background-color: #111;
+}

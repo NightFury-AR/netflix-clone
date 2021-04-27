@@ -1,0 +1,96 @@
+@import "../../utilities/responsive_style";
+
+.banner {
+    position: relative;
+    width:100vw;
+    margin-bottom: 15px;
+    @include xs {height: 350px;}
+    @include md {height:450px;}
+    color: white;
+    object-fit: cover;
+    .banner__content {
+        padding-left: 50px;
+        z-index: 5;
+        @include xs {
+            padding-top:150px;
+            height: 150px;
+            .banner__title {
+                font-size: 2rem;
+                font-weight: 800;
+                padding-bottom: .3rem;
+            }
+            .banner__desc {
+                font-family:'roboto';
+                width: 80%;
+                line-height: 1.5;
+                padding-top: 1.5rem;
+                font-size: .6rem;
+                max-width: 200px;
+                height: 85px;
+            }
+            
+            .banner__button {
+            cursor: pointer;
+            color:#fff;
+            outline: none;
+            border: none;
+            font-weight: 700;
+            border-radius: .2vw;
+            padding:.3rem 1rem;
+            margin-right: 1rem;
+            background-color: rgba(51,51,51,0.5);
+            &:hover {
+                color: #111;
+                background-color: #e6e6e6;
+                transition: all .2s ease-in;
+            }
+        }
+        }
+        @include md {
+            padding-top:200px;
+            height: 250px;
+            .banner__title {
+                font-size: 3rem;
+                font-weight: 800;
+                padding-bottom: .3rem;
+            }
+            .banner__desc {
+                font-family:'roboto';
+                width: 45rem;
+                line-height: 1.5;
+                padding-top: 1.5rem;
+                font-size: .8rem;
+                max-width: 400px;
+                height: 85px;
+            }
+            
+            .banner__button {
+            cursor: pointer;
+            color:#fff;
+            outline: none;
+            border: none;
+            font-weight: 700;
+            border-radius: .2vw;
+            padding:.5rem 2rem;
+            margin-right: 1rem;
+            background-color: rgba(51,51,51,0.5);
+            &:hover {
+                color: #111;
+                background-color: #e6e6e6;
+                transition: all .2s ease-in;
+            }
+        }
+        }
+        
+        
+        
+    }
+    .banner__footerfade {
+        position: absolute;
+        bottom: 0;
+        height: 9.4rem;
+        width:100%;
+        z-index: 3;
+        background-image: linear-gradient(180deg,transparent,rgba(37, 37, 37, 0.541),rgba(17, 17, 17, 0.925));
+    }
+}

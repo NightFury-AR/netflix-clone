@@ -1,0 +1,78 @@
+@import "../../utilities/responsive_style";
+
+.profile {
+    height: 100vh;
+    background-color:#111;
+    color: white;
+    font-family: 'roboto';
+    .profile__banner {
+        @include xs {width: 80%;padding-top: 25%;h1{font-size: 18px}};
+        @include md {width: 50%;padding-top: 8%;h1{font-size: 20px}};
+        margin-left: auto;
+        margin-right: auto;
+        .profile__details {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            .profile__logo {
+               margin-right: 10px;
+               @include xs {width: 50px;height:50px;};
+               @include md {width: 100px;height:100px;};
+            }
+            .profile__info {
+                width:400px;
+                display: flex;
+                flex-direction: column;
+                @include xs {font-size: 12px};
+                @include md {font-size: 20px};
+                .profile__name {
+                    background-color: rgb(65, 62, 62);
+                    @include xs {padding: 8px;};
+                    @include md {padding: 15px;};
+                }
+                .plan__header {
+                    @include xs {padding: 8px 0px;};
+                    @include md {padding: 15px 0px};
+                    font-weight: bolder;border-bottom: 3px solid rgb(32, 32, 32);
+                }
+                .logout__button {
+                    @include xs {padding: 5px};
+                    @include md {padding: 10px;};
+                    text-align: center;background-color: #e50914;font-weight: bolder;cursor: pointer;
+                }
+
+                .plan__section {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding:5px 0px;
+                    .plan__details {
+                        padding:10px 0px;
+                        display: flex;
+                        flex-direction: column;
+                        .plan__name {
+                            @include xs {font-size: .8rem;};
+                            @include md {font-size: 1rem;};
+                            font-weight:400;
+                        }
+                        .plan__price {
+                            @include xs {font-size: .6rem;};
+                            @include md {font-size: .8rem;};
+                            margin-top: 5px;
+                        }
+                    }
+                    .plan__subscription {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 5px;border-radius: 3px;background-color: #e50914;height: 20px;margin: 0 5px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
